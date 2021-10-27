@@ -5,19 +5,19 @@
             "filename": "portfolio-matt.png",
             "alt": "Matt (Death Note)",
             "text": "Check out Cynaenna's <span class='highlight'>portfolio</span>!",
-            "href": "/about.html"
+            "href": "/cynaenna/about.html"
         },
         {
             "filename": "portfolio-pierre.png",
             "alt": "Pierre XO",
             "text": "Curious to know more <span class='highlight'>about</span> Cynaenna?",
-            "href": "/about.html"
+            "href": "/cynaenna/about.html"
         },
         {
             "filename": "portfolio-pinup_hange.png",
             "alt": "Pin-Up Hange Zoe (Attack On Titan)",
             "text": "Would you like to know Cynaenna's rates? <span class='highlight'>Contact</span> us!",
-            "href": "/contact.html"
+            "href": "/cynaenna/contact.html"
         }
     ]
 }
