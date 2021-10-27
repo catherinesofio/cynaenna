@@ -8,8 +8,8 @@ function Nav() {
     <ul id="navigation" class="flex-container ${animation}">
         <li>
             <a
-                href="${(location =="/cynaenna/index.html" || location == "/") ? empty : "/cynaenna/index.html"}"
-                class="${(location =="/cynaenna/index.html" || location == "/") ? "active" : ""}"
+                href="${(location =="/cynaenna/index.html" || location == "/cynaenna") ? empty : "/cynaenna/index.html"}"
+                class="${(location =="/cynaenna/index.html" || location == "/cynaenna") ? "active" : ""}"
             >
             <i class="fa fa-home"></i>
             </a>
