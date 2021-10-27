@@ -6,8 +6,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <!-- ICONS -->
-        <link rel="apple-touch-icon" href="/assets/img/apple-icon.png">
-        <link rel="shortcut icon" type="image/x-icon" href="/assets/img/favicon.ico">
+        <link rel="apple-touch-icon" href="/cynaenna/assets/img/apple-icon.png">
+        <link rel="shortcut icon" type="image/x-icon" href="/cynaenna/assets/img/favicon.ico">
 
         <!-- GOOGLE FONTS -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,11 +24,11 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
         
         <!-- CSS -->
-        <link rel="stylesheet" href="/assets/css/style.css" />
+        <link rel="stylesheet" href="/cynaenna/assets/css/style.css" />
     </head>
     <body>
         <!-- NAV -->
-        <script src="/components/layout/nav.js"></script>
+        <script src="/cynaenna/components/layout/nav.js"></script>
 
         <!-- BACKGROUND -->
         <div id="background"></div>
@@ -58,13 +58,13 @@
         </main>
 
         <!-- FOOTER -->
-        <script src="/components/layout/footer.js"></script>
+        <script src="/cynaenna/components/layout/footer.js"></script>
 
 
-        <script src="/assets/js/utils.js"></script>
-        <script src="/components/slideshow.js"></script>
+        <script src="/cynaenna/assets/js/utils.js"></script>
+        <script src="/cynaenna/components/slideshow.js"></script>
         <script>
-            let jsonData = GetFileContents("/assets/data/data-slideshow.json");
+            let jsonData = GetFileContents("/cynaenna/assets/data/data-slideshow.json");
             let data = JSON.parse(jsonData);
 
             Slideshow("banner", data.path, data.imgs);

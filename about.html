@@ -6,8 +6,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
         <!-- ICONS -->
-        <link rel="apple-touch-icon" href="/assets/img/apple-icon.png">
-        <link rel="shortcut icon" type="image/x-icon" href="/assets/img/favicon.ico">
+        <link rel="apple-touch-icon" href="/cynaenna/assets/img/apple-icon.png">
+        <link rel="shortcut icon" type="image/x-icon" href="/cynaenna/assets/img/favicon.ico">
 
         <!-- GOOGLE FONTS -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,11 +24,11 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
         
         <!-- CSS -->
-        <link rel="stylesheet" href="/assets/css/style.css" />
+        <link rel="stylesheet" href="/cynaenna/assets/css/style.css" />
     </head>
     <body>
         <!-- NAV -->
-        <script src="/components/layout/nav.js"></script>
+        <script src="/cynaenna/components/layout/nav.js"></script>
 
         <!-- BACKGROUND -->
         <div id="background"></div>
@@ -47,21 +47,21 @@
             </div>
 
             <div class="divider">
-                <h3>Would you like to <span class="underline">commission</span> a piece? <a href="/commissions.html">check Cynaenna's rates</a>!</h3>
+                <h3>Would you like to <span class="underline">commission</span> a piece? <a href="/cynaenna/commissions.html">check Cynaenna's rates</a>!</h3>
             </div>
         </main>
 
         <!-- FOOTER -->
-        <script src="/components/layout/footer.js"></script>
+        <script src="/cynaenna/components/layout/footer.js"></script>
 
 
-        <script src="/assets/js/utils.js"></script>
-        <script src="/components/banner.js"></script>
-        <script src="/components/card_container.js"></script>
+        <script src="/cynaenna/assets/js/utils.js"></script>
+        <script src="/cynaenna/components/banner.js"></script>
+        <script src="/cynaenna/components/card_container.js"></script>
         <script>
-            Banner("banner", "/assets/img/portfolio-cynaenna_2021.png", "Camicazi", "<span class='underline'>About</span> Cynaenna");
+            Banner("banner", "/cynaenna/assets/img/portfolio-cynaenna_2021.png", "Camicazi", "<span class='underline'>About</span> Cynaenna");
 
-            let jsonData = GetFileContents("/assets/data/data-technologies.json");
+            let jsonData = GetFileContents("/cynaenna/assets/data/data-technologies.json");
             let data = JSON.parse(jsonData);
 
             CardContainer("technologies", data.path, data.technologies, data.size);

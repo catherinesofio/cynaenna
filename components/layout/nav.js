@@ -8,7 +8,7 @@ function Nav() {
     <ul id="navigation" class="flex-container ${animation}">
         <li>
             <a
-                href="${(location =="/index.html" || location == "/") ? empty : "/index.html"}"
+                href="${(location =="/index.html" || location == "/") ? empty : "/cynaenna/index.html"}"
                 class="${(location =="/index.html" || location == "/") ? "active" : ""}"
             >
             <i class="fa fa-home"></i>
@@ -16,7 +16,7 @@ function Nav() {
         </li>
         <li>
             <a 
-                href="${(location == "/about.html") ? empty : "/about.html"}"
+                href="${(location == "/about.html") ? empty : "/cynaenna/about.html"}"
                 class="${(location =="/about.html") ? "active" : ""}"
             >
                 <i class="fa fa-user"></i>
@@ -24,7 +24,7 @@ function Nav() {
         </li>
         <li>
             <a 
-                href="${(location == "/portfolio.html") ? empty : "/portfolio.html"}"
+                href="${(location == "/portfolio.html") ? empty : "/cynaenna/portfolio.html"}"
                 class="${(location =="/portfolio.html") ? "active" : ""}"
             >
                 <i class="fa fa-palette"></i>
@@ -32,7 +32,7 @@ function Nav() {
         </li>
         <li>
             <a 
-                href="${(location == "/commissions.html") ? empty : "/commissions.html"}"
+                href="${(location == "/commissions.html") ? empty : "/cynaenna/commissions.html"}"
                 class="${(location =="/commissions.html") ? "active" : ""}"
             >
                 <i class="fa fa-briefcase"></i>
@@ -40,7 +40,7 @@ function Nav() {
         </li>
         <li>
             <a 
-                href="${(location == "/contact.html") ? empty : "/contact.html"}"
+                href="${(location == "/contact.html") ? empty : "/cynaenna/contact.html"}"
                 class="${(location =="/contact.html") ? "active" : ""}"
             >
                 <i class="fa fa-envelope"></i>
