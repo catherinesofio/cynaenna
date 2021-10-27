@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <title>Cynaenna</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- ICONS -->
+        <link rel="apple-touch-icon" href="/assets/img/apple-icon.png">
+        <link rel="shortcut icon" type="image/x-icon" href="/assets/img/favicon.ico">
+
+        <!-- GOOGLE FONTS -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif&Bebas+Neue&display=swap" rel="stylesheet">
+ 
+        <!-- FONT AWESOME -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+ 
+        <!-- FONT AWESOME BRANDS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/brands.min.css" integrity="sha512-lCU0XyQA8yobR7ychVxEOU5rcxs0+aYh/9gNDLaybsgW9hdrtqczjfKVNIS5doY0Y5627/+3UVuoGv7p8QsUFw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <!-- ANIMATE CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+        
+        <!-- CSS -->
+        <link rel="stylesheet" href="/assets/css/style.css" />
+    </head>
+    <body>
+        <!-- NAV -->
+        <script src="/components/layout/nav.js"></script>
+
+        <!-- BACKGROUND -->
+        <div id="background"></div>
+        
+        <!-- MAIN -->
+        <main id="main">
+            <!-- SLIDESHOW -->
+            <div id="banner"></div>
+
+            <div id="tagline" class="divider">
+                <h3><span class="highlight">Digital Art</span> made with love and -in some cases- with a pinch of comedy!</h3>
+            </div>
+
+            <div id="featured-posts" class="flex-container">
+                <div class="box animate__animated animate__bounceIn">
+                    <iframe height="440" src="https://www.instagram.com/p/CRrgIcHL_km/embed" frameborder="0"></iframe>
+                </div>
+                
+                <div class="box animate__animated animate__bounceIn">
+                    <iframe height="440" src="https://www.instagram.com/p/CRHuMAjLSLB/embed" frameborder="0"></iframe>
+                </div>
+                
+                <div class="box animate__animated animate__bounceIn">
+                    <iframe height="440" src="https://www.instagram.com/p/CIoXCG-nSdq/embed" frameborder="0"></iframe>
+                </div>
+            </div>
+        </main>
+
+        <!-- FOOTER -->
+        <script src="/components/layout/footer.js"></script>
+
+
+        <script src="/assets/js/utils.js"></script>
+        <script src="/components/slideshow.js"></script>
+        <script>
+            let jsonData = GetFileContents("/assets/data/data-slideshow.json");
+            let data = JSON.parse(jsonData);
+
+            Slideshow("banner", data.path, data.imgs);
+        </script>
+    </body>
+</html>

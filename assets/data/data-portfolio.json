@@ -1,0 +1,54 @@
+{
+    "path": "/assets/img/",
+    "size": "25em",
+    "imgs": [
+        {
+            "filename": "portfolio-matt.png",
+            "alt": "Matt (Death Note)"
+        },
+        {
+            "filename": "portfolio-camicazi.png",
+            "alt": "Camicazi (How To Train Your Dragon)"
+        },
+        {
+            "filename": "portfolio-pinup_hange.png",
+            "alt": "Pin-Up Hange Zoe (Attack On Titan)"
+        },
+        {
+            "filename": "portfolio-near.png",
+            "alt": "Near (Death Note)"
+        },
+        {
+            "filename": "portfolio-l.png",
+            "alt": "L (Death Note)"
+        },
+        {
+            "filename": "portfolio-pierre.png",
+            "alt": "Pierre XO"
+        },
+        {
+            "filename": "portfolio-tsunade.png",
+            "alt": "Lady Tsunade (Naruto)"
+        },
+        {
+            "filename": "portfolio-levi.png",
+            "alt": "Levi (Attack On Titan)"
+        },
+        {
+            "filename": "portfolio-cynaenna_2021.png",
+            "alt": "Cynaenna Mascot (2021)"
+        },
+        {
+            "filename": "portfolio-chubby_burglar.png",
+            "alt": "Chubby Burglar"
+        },
+        {
+            "filename": "portfolio-aoba_seragaki.png",
+            "alt": "Aoba Seragaki"
+        },
+        {
+            "filename": "portfolio-cynaenna_2019.png",
+            "alt": "Cynaenna Mascot (2019)"
+        }
+    ]
+}

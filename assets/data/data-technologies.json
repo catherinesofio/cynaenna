@@ -1,0 +1,18 @@
+{
+    "path": "/assets/img/",
+    "size": "5em",
+    "technologies": [
+        {
+            "filename": "technologies-krita.png",
+            "alt": "Krita"
+        },
+        {
+            "filename": "technologies-psd.png",
+            "alt": "Adobe Photoshop"
+        },
+        {
+            "filename": "technologies-ai.png",
+            "alt": "Adobe Illustrator"
+        }
+    ]
+}
