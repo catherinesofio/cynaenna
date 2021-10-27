@@ -30,11 +30,11 @@
     --section-gradient: linear-gradient(var(--color-01), var(--color-07));
     
     --logo-size: 1.25em;
-    --logo-img: url("/assets/img/apple-icon.png");
+    --logo-img: url("/cynaenna/assets/img/apple-icon.png");
 
     --footer-gradient: linear-gradient(bottom, var(--color-04), var(--color-05));
 
-    --background-pattern: url("/assets/img/background-pattern.png");
+    --background-pattern: url("/cynaenna/assets/img/background-pattern.png");
     --background-size: 35em;
 
     --popup-background: rgba(0,0,0,0.5);
