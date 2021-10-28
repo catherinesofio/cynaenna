@@ -40,20 +40,26 @@
         <main>
             <div id="banner"></div>
 
-            <form class="divider">
+            <form id="contact-form" class="divider needs-validation" novalidate>
                 <fieldset class="row m-1">
-                    <div class="col input-group">
-                        <div class="input-group-prepend">
-                            <label class="input-group-text" for="name">Name</label>
+                    <div class="col">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <label class="input-group-text" for="name">Name</label>
+                            </div>
+                            <input id="name" class="form-control" placeholder="Enter your name..." type="text" pattern="^[A-Za-z]+$" minlength="3" required />
+                            <div class="invalid-feedback">Please insert a valid <b>name</b>. Only letters are allowed!</div>
                         </div>
-                        <input id="name" class="form-control" placeholder="Enter your name..." type="text" minlength="3" required />
                     </div>
 
-                    <div class="col input-group">
-                        <div class="input-group-prepend">
-                            <label class="input-group-text" for="lastname">Last Name</label>
+                    <div class="col">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <label class="input-group-text" for="lastname">Last Name</label>
+                            </div>
+                            <input id="lastname" class="form-control" placeholder="Enter your last name..." type="text" pattern="^[A-Za-z0-9()]+$" minlength="3" required />
+                            <div class="invalid-feedback">Please insert a valid <b>last name</b>. Only letters are allowed!</div>
                         </div>
-                        <input id="lastname" class="form-control" placeholder="Enter your last name..." type="text" minlength="3" required />
                     </div>
                 </fieldset>
 
@@ -65,6 +71,7 @@
                             </label>
                         </div>
                         <input id="email" class="form-control" placeholder="Enter your e-mail address..." type="email" pattern="^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$" required />
+                        <div class="invalid-feedback">Please insert a valid <b>e-mail address</b>.</div>
                     </div>
                 </fieldset>
 
@@ -75,7 +82,8 @@
                                 <i class="fa fa-quote-right"></i>
                             </label>
                         </div>
-                        <input id="subject" class="form-control" placeholder="The subject of your message goes here..." type="text" minlength="5" required />
+                        <input id="subject" class="form-control" placeholder="The subject of your e-mail goes here..." type="text" pattern="^[0-9a-zA-Z\b ]+$" minlength="5" required />
+                        <div class="invalid-feedback">Please insert a valid <b>subject</b>. Only alphanumeric characters and spaces are allowed!</div>
                     </div>
                 </fieldset>
 
@@ -84,11 +92,12 @@
                         <label class="input-group-text" for="body">
                             <i class="fa fa-align-justify"></i>
                         </label>
-                        <textarea id="body" class="form-control" placeholder="Your message goes here..." type="textarea" rows="5" minlength="10" maxlength="1400" required></textarea>
+                        <textarea id="body" class="form-control" placeholder="Your message goes here..." type="text" rows="5" minlength="10" maxlength="1400" onchange="validateTextarea('body')" required></textarea>
+                        <div class="invalid-feedback">Please enter your <b>message</b>. Only letters, numbers, spaces and the following characters are allowed: ¡!¿?.,-()</div>
                     </div>
                 </fieldset>
 
-                <button type="submit">
+                <button type="button" onclick="validateForm()">
                     <i class="fa fa-paper-plane"></i>
                 </button>
             </form>
@@ -107,6 +116,31 @@
         <script src="/cynaenna/assets/js/utils.js"></script>
         <script src="/cynaenna/components/banner.js"></script>
         <script>
+            function validateTextarea(id) {
+                const regex = /^[0-9a-zA-Z\b ¡!¿?.,\-()\n]+$/;
+                const regExp = new RegExp(regex);
+                const textarea = document.getElementById(id);
+
+                console.log(textarea.value);
+                console.log(regex.test(textarea.value));
+                if (regex.test(textarea.value)) {
+                    textarea.setCustomValidity("");
+                } else {
+                    textarea.setCustomValidity("Invalid");
+                }
+            }
+
+            function validateForm() {
+                const form = document.getElementById("contact-form");
+                validateTextarea("body");
+                
+                if (form.checkValidity()) {
+                    form.submit();
+                }
+
+                form.classList.add("was-validated");
+            }
+
             Banner("banner", "/cynaenna/assets/img/portfolio-camicazi.png", "Camicazi", "<span class='underline'>Contact</span> Cynaenna");
 
             const urlParams = new URLSearchParams(window.location.search);
