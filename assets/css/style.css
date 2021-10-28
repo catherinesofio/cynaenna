@@ -106,7 +106,7 @@ h1, h2, h3, h4, h5, h6, button {
     box-shadow: var(--shadow);
 }
 
-.box img:hover {
+.box img[popup=true]:hover {
     filter: brightness(50%);
     -webkit-filter: brightness(50%);
     

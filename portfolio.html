@@ -50,7 +50,7 @@
             let jsonData = GetFileContents("/cynaenna/assets/data/data-portfolio.json");
             let data = JSON.parse(jsonData);
             
-            CardContainer("portfolio", data.path, data.imgs, data.size);
+            CardContainer("portfolio", data.path, data.imgs, data.size, true);
         </script>
     </body>
 </html>

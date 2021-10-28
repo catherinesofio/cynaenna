@@ -1,25 +1,28 @@
-function CardContainer(parent, folder, cards_imgs, size=null) {
+function CardContainer(parent, folder, cards_imgs, size=null, popup=false) {
     let cardContainer = document.createElement("div");
     cardContainer.classList.add("flex-container");
 
     cards_imgs.forEach(x => {
-        let card = Card(folder + x.filename, x.alt, size);
+        let card = Card(folder + x.filename, x.alt, size, popup);
         cardContainer.appendChild(card);
     });
     
     document.getElementById(parent).appendChild(cardContainer);
 }
 
-function Card(src, alt, size) {
+function Card(src, alt, size, popup) {
     let card = document.createElement("div");
     card.classList.add("box", "card", "animate__animated", "animate__bounceIn");
 
     let img = document.createElement("img");
     img.src = src;
     img.alt = alt;
-    img.onclick = (e) => {
-        OpenPopUp(src, alt);
-    };
+    if (popup) {
+        img.setAttribute("popup", true);
+        img.onclick = (e) => {
+            OpenPopUp(src, alt);
+        };
+    }
     card.appendChild(img);
     if (size) {
         img.style.width = size;
