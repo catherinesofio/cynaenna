@@ -45,7 +45,7 @@
                     <div class="col">
                         <div class="input-group">
                             <div class="input-group-prepend">
-                                <label class="input-group-text" for="name">Name</label>
+                                <label class="input-group-text" for="name" title="Name">Name</label>
                             </div>
                             <input id="name" class="form-control" placeholder="Enter your name..." type="text" pattern="^[A-Za-z]+$" minlength="3" required />
                             <div class="invalid-feedback">Please insert a valid <b>name</b>. Only letters are allowed!</div>
@@ -55,7 +55,7 @@
                     <div class="col">
                         <div class="input-group">
                             <div class="input-group-prepend">
-                                <label class="input-group-text" for="lastname">Last Name</label>
+                                <label class="input-group-text" for="lastname" title="Last Name">Last Name</label>
                             </div>
                             <input id="lastname" class="form-control" placeholder="Enter your last name..." type="text" pattern="^[A-Za-z0-9()]+$" minlength="3" required />
                             <div class="invalid-feedback">Please insert a valid <b>last name</b>. Only letters are allowed!</div>
@@ -66,7 +66,7 @@
                 <fieldset class="row m-1">
                     <div class="input-group">
                         <div class="input-group-prepend">
-                            <label class="input-group-text" for="email">
+                            <label class="input-group-text" for="email" title="E-mail Address">
                                 <i class="fa fa-envelope"></i>
                             </label>
                         </div>
@@ -78,21 +78,21 @@
                 <fieldset class="row m-1">
                     <div class="input-group">
                         <div class="input-group-prepend">
-                            <label class="input-group-text" for="subject">
+                            <label class="input-group-text" for="subject" title="Subject">
                                 <i class="fa fa-quote-right"></i>
                             </label>
                         </div>
-                        <input id="subject" class="form-control" placeholder="The subject of your e-mail goes here..." type="text" pattern="^[0-9a-zA-Z\b ]+$" minlength="5" required />
+                        <input id="subject" class="form-control" placeholder="Enter the subject of your e-mail..." type="text" pattern="^[0-9a-zA-Z\b ]+$" minlength="5" required />
                         <div class="invalid-feedback">Please insert a valid <b>subject</b>. Only alphanumeric characters and spaces are allowed!</div>
                     </div>
                 </fieldset>
 
                 <fieldset class="row m-1">
                     <div class="input-group">
-                        <label class="input-group-text" for="body">
+                        <label class="input-group-text" for="body" title="Message">
                             <i class="fa fa-align-justify"></i>
                         </label>
-                        <textarea id="body" class="form-control" placeholder="Your message goes here..." type="text" rows="5" minlength="10" maxlength="1400" onchange="validateTextarea('body')" required></textarea>
+                        <textarea id="body" class="form-control" placeholder="Enter your message..." type="text" rows="5" minlength="10" maxlength="1400" onchange="validateTextarea('body')" required></textarea>
                         <div class="invalid-feedback">Please enter your <b>message</b>. Only letters, numbers, spaces and the following characters are allowed: ¡!¿?.,-()</div>
                     </div>
                 </fieldset>
@@ -121,8 +121,6 @@
                 const regExp = new RegExp(regex);
                 const textarea = document.getElementById(id);
 
-                console.log(textarea.value);
-                console.log(regex.test(textarea.value));
                 if (regex.test(textarea.value)) {
                     textarea.setCustomValidity("");
                 } else {
