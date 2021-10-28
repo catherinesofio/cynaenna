@@ -1,41 +1,39 @@
 :root {
     --color-00: #FFFEFD;
-    --color-01: #000102;
-    --color-02: #57005F;
-    --color-03: #F300F4;
-    --color-04: #A2E000;
-    --color-05: #BEEB00;
-    --color-07: #21272c;
-    --color-06: #e6f5bf;
+    --color-01: #21272c;
+    --color-02: #000102;
+    --color-03: #57005F;
+    --color-04: #F300F4;
+    --color-05: #A2E000;
+    --color-06: #BEEB00;
+    --color-07: #e6f5bf;
+
+    --margin: 1%;
+    --padding: 1%;
 
     --text-size: 1em;
+
+    --border-radius: 15px;
 
     --shadow: 0em 0.25em 0.5em rgba(0,0,0,0.15);
     --shadow-strong: 0em 0.05em 0.25em rgba(0,0,0,0.75);
 
-    --border-radius: 15px;
+    --nav-gradient: linear-gradient(var(--color-06), var(--color-05));
+    --section-gradient: linear-gradient(var(--color-02), var(--color-01));
+    --footer-gradient: linear-gradient(bottom, var(--color-05), var(--color-06));
+    
+    --logo-size: 1.25em;
+    --logo-img: url("/cynaenna/assets/img/apple-icon.png");
+
+    --background-pattern: url("/cynaenna/assets/img/background-pattern.png");
+    --background-size: 35em;
 
     --box-height: 3.5%;
     --box-width: 3.5%;
     --box-img-size: 100%;
     --box-img-padding: 5%;
 
-    --margin: 1.5%;
-    --padding: 1%;
-
     --banner-size: 45vh;
-
-    --nav-gradient: linear-gradient(var(--color-05), var(--color-04));
-
-    --section-gradient: linear-gradient(var(--color-01), var(--color-07));
-    
-    --logo-size: 1.25em;
-    --logo-img: url("/cynaenna/assets/img/apple-icon.png");
-
-    --footer-gradient: linear-gradient(bottom, var(--color-04), var(--color-05));
-
-    --background-pattern: url("/cynaenna/assets/img/background-pattern.png");
-    --background-size: 35em;
 
     --popup-background: rgba(0,0,0,0.5);
 
@@ -57,9 +55,9 @@
     margin: 0;
     padding: 0;
 
-    z-index: var(--layer-middle);
-
     list-style: none;
+
+    z-index: var(--layer-middle);
 }
 
 html, body {
@@ -71,8 +69,8 @@ html, body {
 }
 
 h1, h2, h3, h4, h5, h6, button {
+    color: var(--color-02);
     font-family: 'Bebas Neue', cursive;
-    color: var(--color-01);
 }
 
 
@@ -95,9 +93,9 @@ h1, h2, h3, h4, h5, h6, button {
 }
 
 .box {
-    border-radius: var(--border-radius);
-
     padding: var(--padding);
+
+    border-radius: var(--border-radius);
 }
 
 .box img {
@@ -110,7 +108,8 @@ h1, h2, h3, h4, h5, h6, button {
 
 .box img:hover {
     filter: brightness(50%);
-
+    -webkit-filter: brightness(50%);
+    
     cursor: pointer;
 }
 
@@ -122,9 +121,9 @@ h1, h2, h3, h4, h5, h6, button {
 }
 
 .box-info {
+    margin: var(--margin);
+    
     background-color: var(--color-00);
-
-    margin: var(--padding);
 }
 
 .box-info li {
@@ -180,7 +179,7 @@ nav {
 
     background-image: var(--nav-gradient);
 
-    border-bottom: 0.1vh solid var(--color-05);
+    border-bottom: 0.1vh solid var(--color-06);
     box-shadow: var(--shadow);
 
     z-index: var(--layer-top);
@@ -197,10 +196,10 @@ nav {
 #brand::before {
     display: inline-flex;
     
+    content: "";
+
     position: absolute;
     transform: translate(-125%);
-
-    content: "";
     
     width: var(--logo-size);
     height: var(--logo-size);
@@ -220,7 +219,7 @@ nav {
 }
 
 #navigation a {
-    color: var(--color-06);
+    color: var(--color-07);
 }
 
 #navigation a:hover {
@@ -228,7 +227,13 @@ nav {
 }
 
 #navigation .active i {
-    color: var(--color-02);
+    color: var(--color-03);
+}
+
+nav h2 {
+    margin-bottom: 0;
+
+    font-size: 1.5em;
 }
 
 
@@ -254,7 +259,7 @@ footer {
     padding-top: var(--padding);
     padding-bottom: var(--padding);
 
-    background-color: var(--color-01);
+    background-color: var(--color-02);
 }
 
 #footer-copyright {
@@ -262,15 +267,15 @@ footer {
     padding: calc(var(--padding) / 2);
 
     color: var(--color-00);
-    background-color: var(--color-02);
+    background-color: var(--color-03);
 }
 
 #footer-copyright a {
-    color: var(--color-03);
+    color: var(--color-04);
 }
 
 #footer-copyright a:hover {
-    color: var(--color-04);
+    color: var(--color-05);
 }
 
 
@@ -371,9 +376,7 @@ footer {
     top: 50%;
     left: 50%;
 
-    width: 50vw;
-
-    padding: var(--padding);
+    width: min(95vw, 95vh);
 
     transform: translate(-50%, -50%);
 
@@ -392,18 +395,18 @@ a {
 }
 
 a:hover {
-    color: var(--color-03);
+    color: var(--color-04);
 }
 
 /* accents */
 .highlight {
-    color: var(--color-03);
+    color: var(--color-04);
 }
 
 .underline, .highlight {
     text-decoration: underline;
     text-underline-offset: 0.15em;
-    text-decoration-color: var(--color-03);
+    text-decoration-color: var(--color-04);
 }
 
 /* divider */
@@ -419,11 +422,11 @@ a:hover {
 }
 
 .divider a {
-    color: var(--color-04);
+    color: var(--color-05);
 }
 
 .divider a:hover {
-    color: var(--color-05);
+    color: var(--color-06);
 }
 
 /* section */
@@ -457,6 +460,7 @@ a:hover {
     margin: var(--padding) 0;
 }
 
+/* other */
 iframe {
     border-radius: var(--border-radius);
 }
@@ -470,14 +474,14 @@ button {
     padding: var(--padding);
 
     color: var(--color-00);
-    background-color: var(--color-03);
+    background-color: var(--color-04);
 
     border: 0;
 }
 
 button:hover {
     color: var(--color-00);
-    background-color: var(--color-02);
+    background-color: var(--color-03);
 
     border: 0;
 
@@ -490,4 +494,8 @@ button:hover {
     right: 0;
 
     font-size: calc(var(--text-size) * 2);
+}
+
+.invalid-feedback {
+    text-align: left;
 }

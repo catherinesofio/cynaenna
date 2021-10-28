@@ -1,6 +1,6 @@
 {
     "path": "/cynaenna/assets/img/",
-    "size": "25em",
+    "size": "max(25vw, 25vh)",
     "imgs": [
         {
             "filename": "portfolio-matt.png",
